@@ -198,7 +198,7 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {step.step}
                   </div>
-                  {index < steps.length - 1 && window.innerWidth >= 768 && (
+                  {index < steps.length - 1 && (
                     <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300 -translate-x-8"></div>
                   )}
                 </div>

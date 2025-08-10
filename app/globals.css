@@ -223,6 +223,18 @@ select:focus-visible {
     max-height: calc(100vh - 2rem);
     overflow-y: auto;
   }
+  
+  /* Hero image responsiveness */
+  .hero-image {
+    object-position: center;
+    min-height: 300px;
+  }
+  
+  /* Better mobile image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Tablet-specific adjustments */
