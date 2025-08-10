@@ -130,14 +130,22 @@ export default function SearchPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <motion.section 
-        className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12"
+        className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
+        <div className="absolute inset-0">
+          <img
+            src="/images/Iiyqneo.jpg"
+            alt="Mortgage consultation"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-blue-800/70"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center"
+            className="relative text-center"
             variants={fadeInUp}
             initial="initial"
             animate="animate"

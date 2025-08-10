@@ -67,7 +67,14 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0">
+          <img
+            src="/images/1a5GweG.jpg"
+            alt="Financial professionals"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-blue-900/60"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center"
