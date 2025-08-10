@@ -162,7 +162,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -174,14 +174,14 @@ export default function HomePage() {
                 <motion.div key={index} variants={fadeInUp}>
                   <Link href={feature.href}>
                     <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
-                      <CardContent className="p-6 text-center">
+                      <CardContent className="p-4 md:p-6 text-center">
                         <div className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                           <Icon className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                           {feature.title}
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-sm md:text-base text-gray-600">
                           {feature.description}
                         </p>
                       </CardContent>
@@ -195,7 +195,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -203,14 +203,14 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
               Ready to Find Your Perfect Mortgage?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-lg md:text-xl mb-6 md:mb-8 text-blue-100">
               Join thousands of satisfied customers who found better rates with our platform
             </p>
             <Link href="/search">
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg">
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg mobile-button sm:w-auto">
                 Get Started Now
               </Button>
             </Link>

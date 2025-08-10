@@ -51,6 +51,7 @@ export default function SearchSection({ searchFilters, setSearchFilters }: Searc
                         placeholder="30,000,000"
                         value={searchFilters.loanAmount}
                         onChange={(e) => handleFilterChange('loanAmount', e.target.value)}
+                        className="text-base" // Prevent zoom on iOS
                       />
                       <div className="text-xs text-gray-500 mt-1">{t('tenThousandYen')}</div>
                     </div>
@@ -64,6 +65,7 @@ export default function SearchSection({ searchFilters, setSearchFilters }: Searc
                         placeholder="1.5"
                         value={searchFilters.currentRate}
                         onChange={(e) => handleFilterChange('currentRate', e.target.value)}
+                        className="text-base" // Prevent zoom on iOS
                       />
                       <div className="text-xs text-gray-500 mt-1">%</div>
                     </div>

@@ -46,13 +46,13 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50 mobile-nav">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-14 md:h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
-                <h1 className="text-2xl font-bold text-blue-600 cursor-pointer hover:text-blue-700 transition-colors">
+                <h1 className="text-xl md:text-2xl font-bold text-blue-600 cursor-pointer hover:text-blue-700 transition-colors">
                   {t('brandName')}
                 </h1>
               </Link>

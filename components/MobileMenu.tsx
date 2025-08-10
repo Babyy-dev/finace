@@ -29,14 +29,14 @@ export default function MobileMenu() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="sm" className="md:hidden">
+        <Button variant="outline" size="sm" className="md:hidden p-2">
           <Menu className="h-4 w-4" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-80">
+      <SheetContent side="right" className="w-80 sm:w-96">
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold text-blue-600">{t('brandName')}</h2>
+            <h2 className="text-lg md:text-xl font-bold text-blue-600">{t('brandName')}</h2>
             <LanguageSwitcher />
           </div>
           

@@ -82,6 +82,7 @@ export default function SimulationSection() {
                   placeholder="e.g., 30000000"
                   value={formData.loanAmount}
                   onChange={(e) => handleInputChange('loanAmount', e.target.value)}
+                  className="text-base" // Prevent zoom on iOS
                 />
               </div>
               
@@ -94,6 +95,7 @@ export default function SimulationSection() {
                   placeholder="e.g., 2.5"
                   value={formData.interestRate}
                   onChange={(e) => handleInputChange('interestRate', e.target.value)}
+                  className="text-base" // Prevent zoom on iOS
                 />
               </div>
               

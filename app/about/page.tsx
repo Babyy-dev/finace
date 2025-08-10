@@ -187,7 +187,7 @@ export default function AboutPage() {
             How It Works
           </motion.h3>
           <motion.div 
-            className="grid md:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
             variants={staggerContainer}
             initial="initial"
             animate="animate"
@@ -198,7 +198,7 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {step.step}
                   </div>
-                  {index < steps.length - 1 && (
+                  {index < steps.length - 1 && window.innerWidth >= 768 && (
                     <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300 -translate-x-8"></div>
                   )}
                 </div>
@@ -282,22 +282,22 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <motion.div 
-          className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-12"
+          className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-6 md:p-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
             Ready to Compare Mortgages?
           </h3>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-lg md:text-xl mb-6 md:mb-8 text-blue-100">
             Free mortgage comparison service. Find the perfect product for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 mobile-button sm:w-auto">
               Start Free Comparison
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 mobile-button sm:w-auto">
               Consult with Expert
             </Button>
           </div>

@@ -17,6 +17,7 @@ interface ProductListSectionProps {
 export default function ProductListSection({ searchFilters, selectedProducts, setSelectedProducts }: ProductListSectionProps) {
   const [sortBy, setSortBy] = useState('rate');
   const [showDetails, setShowDetails] = useState<string | null>(null);
+  const { t } = useTranslation();
 
   const products = [
     {

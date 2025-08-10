@@ -128,7 +128,7 @@ export default function NewsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Category Filter */}
         <motion.div 
-          className="flex flex-wrap justify-center gap-2 mb-8"
+          className="flex flex-wrap justify-center gap-2 mb-6 md:mb-8 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -137,9 +137,9 @@ export default function NewsPage() {
             <Button
               key={category}
               variant={selectedCategory === category ? "default" : "outline"}
-              size="sm"
+              size="sm" 
               onClick={() => setSelectedCategory(category)}
-              className={selectedCategory === category ? "bg-blue-600 hover:bg-blue-700" : "hover:bg-blue-50 hover:text-blue-700"}
+              className={`text-xs md:text-sm ${selectedCategory === category ? "bg-blue-600 hover:bg-blue-700" : "hover:bg-blue-50 hover:text-blue-700"}`}
             >
               {category === 'all' ? 'All Categories' : category}
             </Button>
@@ -289,7 +289,7 @@ export default function NewsPage() {
             Latest Articles
           </motion.h3>
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             variants={staggerContainer}
             initial="initial"
             animate="animate"
@@ -301,7 +301,7 @@ export default function NewsPage() {
                     <img
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-blue-600 text-white">
@@ -310,7 +310,7 @@ export default function NewsPage() {
                     </div>
                   </div>
                   
-                  <CardContent className="p-6 flex flex-col h-full">
+                  <CardContent className="p-4 md:p-6 flex flex-col h-full">
                     <h4 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors flex-grow">
                       {article.title}
                     </h4>

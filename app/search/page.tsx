@@ -143,10 +143,10 @@ export default function SearchPage() {
             animate="animate"
           >
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('mortgageSearch')}
+              Search Results: {products.length} items
             </h1>
             <p className="text-xl text-blue-100">
-              Find the perfect mortgage for your needs
+              Found mortgages matching your criteria
             </p>
           </motion.div>
         </div>
@@ -271,11 +271,11 @@ export default function SearchPage() {
                     </div>
                     
                     <div className="mt-6 flex gap-4">
-                      <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+                      <Button className="bg-orange-500 hover:bg-orange-600 mobile-button sm:w-auto">
                         Search Matching Mortgages
                       </Button>
-                      <Button size="lg" variant="outline">
-                        Reset Conditions
+                      <Button variant="outline" className="mobile-button sm:w-auto">
+                        Reset
                       </Button>
                     </div>
                   </CardContent>
@@ -296,10 +296,10 @@ export default function SearchPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                Search Results: {products.length} items
+                Mortgage Search Results
               </h2>
               <p className="text-gray-600">
-                Found mortgages matching your criteria
+                {products.length} products found matching your criteria
               </p>
             </motion.div>
             
@@ -439,12 +439,12 @@ export default function SearchPage() {
 
                     {showDetails === product.id && (
                       <motion.div 
-                        className="border-t bg-gray-50 p-6"
+                        className="border-t bg-gray-50 p-4 md:p-6"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         transition={{ duration: 0.3 }}
                       >
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                           <div>
                             <h4 className="font-semibold text-gray-900 mb-3">Loan Conditions</h4>
                             <ul className="space-y-2 text-sm text-gray-600">
@@ -490,7 +490,7 @@ export default function SearchPage() {
           </motion.div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
+            <Button size="lg" variant="outline">
               Load More Results
             </Button>
           </div>
